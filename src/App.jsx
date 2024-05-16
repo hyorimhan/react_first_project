@@ -35,17 +35,21 @@ function App() {
   };
 
   const moveDone = (clickedId) => {
-    const updateDone = todos.map((el) => {
-      if (el.id === clickedId) {
-        return { ...el, isDone: !el.isDone };
+    const updateDone = todos.map((todo) => {
+      if (todo.id === clickedId) {
+        return { ...todo, isDone: !todo.isDone };
       }
-      return el;
+      return todo;
+      if (todo.isDone === false) {
+        ('Working');
+      }
+      ('Done');
     });
     setTodo(updateDone);
   };
 
   const onDelete = (clickedId) => {
-    const filteredTodos = todos.filter((el) => el.id !== clickedId);
+    const filteredTodos = todos.filter((todo) => todo.id !== clickedId);
     setTodo(filteredTodos);
   };
 

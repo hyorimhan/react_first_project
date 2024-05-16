@@ -1,3 +1,7 @@
+* {
+  user-select: none;
+}
+
 body {
   background-image: url('./assets/paul-hanaoka-7DMkvNblkpw-unsplash.jpg');
   background-size: cover;
@@ -81,14 +85,14 @@ body {
 .doneBtn {
   text-align: center;
   margin: 0px;
-  height: 25px;
-  width: 80px;
+  height: 30px;
+  width: 130px;
   margin: 3px;
 
   border: none;
   border-radius: 5px;
 
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .workingBtn {

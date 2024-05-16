@@ -1,4 +1,5 @@
 import React from 'react';
+import Todo from './Todo';
 
 const TodoList = ({ todos, onDelete, moveDone }) => {
   return (
@@ -6,26 +7,15 @@ const TodoList = ({ todos, onDelete, moveDone }) => {
       <div className="working">
         <h2>Working🏃‍♀️</h2>
 
-        {todos.map((el) => {
-          if (el.isDone === false) {
+        {todos.map((todo) => {
+          if (todo.isDone === false) {
             return (
-              <div className="workingTodo" key={el.id}>
-                <h3>{el.title}</h3>
-                <p>{el.contents}</p>
-                <div className="workingBtn">
-                  <button
-                    className="deleteBtn"
-                    onClick={() => {
-                      onDelete(el.id);
-                    }}
-                  >
-                    delete
-                  </button>
-                  <button className="doneBtn" onClick={() => moveDone(el.id)}>
-                    Done
-                  </button>
-                </div>
-              </div>
+              <Todo
+                key={todo.id}
+                todo={todo}
+                onDelete={onDelete}
+                moveDone={moveDone}
+              />
             );
           }
         })}
@@ -33,26 +23,15 @@ const TodoList = ({ todos, onDelete, moveDone }) => {
 
       <div className="done">
         <h2>Done🎶</h2>
-        {todos.map((el) => {
-          if (el.isDone === true) {
+        {todos.map((todo) => {
+          if (todo.isDone === true) {
             return (
-              <div className="workingTodo" key={el.id}>
-                <h3>{el.title}</h3>
-                <p>{el.contents}</p>
-                <div className="workingBtn">
-                  <button
-                    className="deleteBtn"
-                    onClick={() => {
-                      onDelete(el.id);
-                    }}
-                  >
-                    delete
-                  </button>
-                  <button className="doneBtn" onClick={() => moveDone(el.id)}>
-                    working
-                  </button>
-                </div>
-              </div>
+              <Todo
+                key={todo.id}
+                todo={todo}
+                onDelete={onDelete}
+                moveDone={moveDone}
+              />
             );
           }
         })}
