@@ -1,0 +1,98 @@
+body {
+  background-image: url('./assets/paul-hanaoka-7DMkvNblkpw-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layout {
+  display: block;
+  overflow: hidden;
+  width: 1200px;
+  min-height: 800px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.title {
+  border-bottom: 1px solid rgb(31, 31, 31);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(15, 15, 15);
+}
+
+.addTodo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto 0;
+}
+
+.inputTitle,
+.inputContents {
+  margin-bottom: 10px;
+  height: 30px;
+  width: 200px;
+}
+
+.addBtn {
+  width: 208px;
+  height: 25px;
+  background-color: rgb(214, 147, 93);
+
+  border: none;
+  color: aliceblue;
+
+  font-size: 18px;
+}
+
+.todoList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.working {
+  text-align: center;
+  /* margin-left: 3.125em; */
+  width: 300px;
+}
+
+.workingTodo {
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  background-color: #d4d4d4;
+}
+
+.done {
+  text-align: center;
+
+  width: 300px;
+}
+
+.deleteBtn,
+.doneBtn {
+  text-align: center;
+  margin: 0px;
+  height: 25px;
+  width: 80px;
+  margin: 3px;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 18px;
+}
+
+.workingBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
